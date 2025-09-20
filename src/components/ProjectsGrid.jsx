@@ -4,34 +4,34 @@ const ProjectsGrid = () => {
   const projects = [
     {
       id: 1,
-      name: "H2BIS – ERP Platform",
-      description: "ERP platform with finance, HRIS, Sales, Inventory and POS operations",
+      name: "H2BIS – ERP Product (Zincat Technologies)",
+      description: "ERP product with finance, HRIS, Sales, Inventory and POS operations",
       role: "",
-      responsibilities: ["Project tracking through Jira boards", "Stakeholder communication"],
+      responsibilities: ["Requirement gathering", "Client coordination", "Documentation (Agreements proposal)"],
       technologies: ["Jira"],
       link: "#"
     },
     {
       id: 2,
-      name: "Therezi – HRIS Process Management System",
+      name: "Therezi – HRIS Process Management System (Fcode Labs)",
       description: "Human Resource Information System for managing employee data, payroll, and HR processes",
-      role: "Project Manager Intern / Scrum Master (Fcode Labs)",
+      role: "Project Manager Intern / Scrum Master ",
       responsibilities: ["Requirement gathering", "Sprint planning", "Creating wireframes", "Managing Jira boards", "Coordinating team tasks"],
       technologies: ["React", "JavaScript", "MySQL", "CSS"],
       link: "#"
     },
     {
       id: 3,
-      name: "Dear Diary – Intern Training Platform",
+      name: "Dear Diary – Intern Training Platform (Fcode Labs)",
       description: "Web application to facilitate intern onboarding and training tracking",
-      role: "Project Manager Intern (Fcode Labs)",
+      role: "Project Manager Intern ",
       responsibilities: ["Coordinated project planning", "Requirement gathering", "Sprint management"],
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       link: "#"
     },
     {
       id: 4,
-      name: "Ramp Up - Intern Training Project",
+      name: "Ramp Up - Intern Training Project (Fcode Labs)",
       description: "Platform for managing & tracking intern training modules and progress reports.",
       role: "Project Manager Intern",
       responsibilities: ["Sprint reporting", "Coordinated tasks with development team", "Collected Feedback"],
@@ -40,9 +40,9 @@ const ProjectsGrid = () => {
     },
     {
       id: 5,
-      name: "Compose Glow – Form Customization Platform",
+      name: "Compose Glow – Form Customization Platform (Aventude)",
       description: "Platform for creating and customizing organizational forms",
-      role: "Project Manager Intern / Scrum Master (Aventude)",
+      role: "Project Manager Intern / Scrum Master ",
       responsibilities: ["Managed project timelines", "Jira boards management", "Sprint reporting", "Stakeholder communication"],
       technologies: ["Jira", "Trello", "Confluence"],
       link: "#"

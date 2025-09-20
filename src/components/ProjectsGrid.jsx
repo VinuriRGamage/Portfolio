@@ -6,9 +6,9 @@ const ProjectsGrid = () => {
       id: 1,
       name: "H2BIS – ERP Platform",
       description: "ERP platform with finance, HRIS, Sales, Inventory and POS operations",
-      role: "Requirement gathering, Client coordination, Documentation",
+      // role: "",
       responsibilities: ["Project tracking through Jira boards", "Stakeholder communication"],
-      technologies: ["Jira"],
+      // technologies: ["Jira"],
       link: "#"
     },
     {
@@ -17,7 +17,7 @@ const ProjectsGrid = () => {
       description: "Human Resource Information System for managing employee data, payroll, and HR processes",
       role: "Project Manager Intern / Scrum Master (Fcode Labs)",
       responsibilities: ["Requirement gathering", "Sprint planning", "Creating wireframes", "Managing Jira boards", "Coordinating team tasks"],
-      technologies: ["React", "JavaScript", "MySQL", "CSS"],
+      // technologies: ["React", "JavaScript", "MySQL", "CSS"],
       link: "#"
     },
     {
@@ -26,7 +26,7 @@ const ProjectsGrid = () => {
       description: "Web application to facilitate intern onboarding and training tracking",
       role: "Project Manager Intern (Fcode Labs)",
       responsibilities: ["Coordinated project planning", "Requirement gathering", "Sprint management"],
-      technologies: ["React", "HTML", "CSS", "JavaScript"],
+      // technologies: ["React", "HTML", "CSS", "JavaScript"],
       link: "#"
     },
     {
@@ -35,7 +35,7 @@ const ProjectsGrid = () => {
       description: "Platform for creating and customizing organizational forms",
       role: "Project Manager Intern / Scrum Master (Aventude)",
       responsibilities: ["Managed project timelines", "Jira boards management", "Sprint reporting", "Stakeholder communication"],
-      technologies: ["Jira", "Trello", "Confluence"],
+      // technologies: ["Jira", "Trello", "Confluence"],
       link: "#"
     },
     {

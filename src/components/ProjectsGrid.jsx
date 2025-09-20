@@ -4,56 +4,56 @@ const ProjectsGrid = () => {
   const projects = [
     {
       id: 1,
-      name: "E-Commerce Platform Migration",
-      description: "Led the migration of legacy e-commerce system to modern cloud-based platform, improving performance by 40% and reducing operational costs by 25%.",
-      role: "Lead Project Manager",
-      responsibilities: "Coordinated cross-functional teams, managed stakeholder communications, risk assessment, and timeline delivery",
-      technologies: ["Agile", "Jira", "MS Project", "Scrum"],
+      name: "H2BIS – ERP Platform",
+      description: "ERP platform with finance, HRIS, Sales, Inventory and POS operations",
+      role: "Requirement gathering, Client coordination, Documentation",
+      responsibilities: ["Project tracking through Jira boards", "Stakeholder communication"],
+      technologies: ["Jira"],
       link: "#"
     },
     {
       id: 2,
-      name: "Mobile App Development Project",
-      description: "Managed end-to-end development of customer-facing mobile application with 50K+ downloads in first quarter post-launch.",
-      role: "Senior Project Manager",
-      responsibilities: "Sprint planning, backlog management, quality assurance coordination, and client relationship management",
-      technologies: ["Scrum", "Trello", "Kanban", "Agile"],
+      name: "Therezi – HRIS Process Management System",
+      description: "Human Resource Information System for managing employee data, payroll, and HR processes",
+      role: "Project Manager Intern / Scrum Master (Fcode Labs)",
+      responsibilities: ["Requirement gathering", "Sprint planning", "Creating wireframes", "Managing Jira boards", "Coordinating team tasks"],
+      technologies: ["React", "JavaScript", "MySQL", "CSS"],
       link: "#"
     },
     {
       id: 3,
-      name: "Digital Transformation Initiative",
-      description: "Orchestrated company-wide digital transformation affecting 200+ employees, streamlining workflows and increasing productivity by 30%.",
-      role: "Project Manager",
-      responsibilities: "Change management, training coordination, process optimization, and progress tracking",
-      technologies: ["MS Project", "Jira", "Agile", "Waterfall"],
+      name: "Dear Diary – Intern Training Platform",
+      description: "Web application to facilitate intern onboarding and training tracking",
+      role: "Project Manager Intern (Fcode Labs)",
+      responsibilities: ["Coordinated project planning", "Requirement gathering", "Sprint management"],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       link: "#"
     },
     {
       id: 4,
-      name: "Data Analytics Dashboard",
-      description: "Delivered comprehensive business intelligence dashboard enabling real-time decision making for executive team.",
-      role: "Technical Project Manager",
-      responsibilities: "Requirements gathering, vendor management, testing coordination, and user acceptance management",
-      technologies: ["Agile", "Jira", "SQL", "Scrum"],
+      name: "Compose Glow – Form Customization Platform",
+      description: "Platform for creating and customizing organizational forms",
+      role: "Project Manager Intern / Scrum Master (Aventude)",
+      responsibilities: ["Managed project timelines", "Jira boards management", "Sprint reporting", "Stakeholder communication"],
+      technologies: ["Jira", "Trello", "Confluence"],
       link: "#"
     },
     {
       id: 5,
-      name: "Customer Support System Upgrade",
-      description: "Successfully upgraded legacy customer support system, reducing response time by 60% and improving customer satisfaction scores.",
-      role: "Project Manager",
-      responsibilities: "Timeline management, resource allocation, stakeholder communication, and post-implementation support",
-      technologies: ["Trello", "Kanban", "Agile", "MS Project"],
+      name: "CareFello – Elder Care Management System",
+      description: "A web-based system to manage elderly care, appointments, and caregiver interactions",
+      role: "University Project Contributor",
+      responsibilities: ["Developed frontend UI", "Integrated backend APIs", "Participated in testing and deployment"],
+      technologies: ["React", "Spring Boot", "PostgreSQL"],
       link: "#"
     },
     {
       id: 6,
-      name: "API Integration Project",
-      description: "Managed integration of third-party APIs to enhance system functionality, completing project 2 weeks ahead of schedule.",
-      role: "Technical Project Manager",
-      responsibilities: "Technical coordination, documentation management, testing oversight, and deployment planning",
-      technologies: ["Jira", "Scrum", "Agile", "Git"],
+      name: "Krushi Arunalu – Supply Chain Management System",
+      description: "Web-based system to manage purchase and sales of agri and crop products",
+      role: "University Project Contributor",
+      responsibilities: ["Developed customer-facing portal", "Managed database integration", "Ensured responsive design"],
+      technologies: ["HTML", "CSS", "PHP", "MySQL"],
       link: "#"
     }
   ]
@@ -95,10 +95,17 @@ const ProjectsGrid = () => {
               
               <div className="mb-4">
                 <h4 className="font-semibold text-gray-900 text-sm mb-2">Key Responsibilities:</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{project.responsibilities}</p>
+                <ul className="text-gray-600 text-sm space-y-1">
+                  {project.responsibilities.map((responsibility, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="w-1 h-1 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      {responsibility}
+                    </li>
+                  ))}
+                </ul>
               </div>
               
-              <div className="mb-6">
+              <div>
                 <h4 className="font-semibold text-gray-900 text-sm mb-2">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
@@ -108,7 +115,6 @@ const ProjectsGrid = () => {
                   ))}
                 </div>
               </div>
-              
 
             </motion.div>
           ))}

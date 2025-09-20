@@ -6,9 +6,9 @@ const ProjectsGrid = () => {
       id: 1,
       name: "H2BIS – ERP Platform",
       description: "ERP platform with finance, HRIS, Sales, Inventory and POS operations",
-      // role: "",
+      role: "",
       responsibilities: ["Project tracking through Jira boards", "Stakeholder communication"],
-      // technologies: ["Jira"],
+      technologies: ["Jira"],
       link: "#"
     },
     {
@@ -17,7 +17,7 @@ const ProjectsGrid = () => {
       description: "Human Resource Information System for managing employee data, payroll, and HR processes",
       role: "Project Manager Intern / Scrum Master (Fcode Labs)",
       responsibilities: ["Requirement gathering", "Sprint planning", "Creating wireframes", "Managing Jira boards", "Coordinating team tasks"],
-      // technologies: ["React", "JavaScript", "MySQL", "CSS"],
+      technologies: ["React", "JavaScript", "MySQL", "CSS"],
       link: "#"
     },
     {
@@ -26,20 +26,29 @@ const ProjectsGrid = () => {
       description: "Web application to facilitate intern onboarding and training tracking",
       role: "Project Manager Intern (Fcode Labs)",
       responsibilities: ["Coordinated project planning", "Requirement gathering", "Sprint management"],
-      // technologies: ["React", "HTML", "CSS", "JavaScript"],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       link: "#"
     },
     {
       id: 4,
-      name: "Compose Glow – Form Customization Platform",
-      description: "Platform for creating and customizing organizational forms",
-      role: "Project Manager Intern / Scrum Master (Aventude)",
-      responsibilities: ["Managed project timelines", "Jira boards management", "Sprint reporting", "Stakeholder communication"],
-      // technologies: ["Jira", "Trello", "Confluence"],
+      name: "Ramp Up - Intern Training Project",
+      description: "Platform for managing & tracking intern training modules and progress reports.",
+      role: "Project Manager Intern",
+      responsibilities: ["Sprint reporting", "Coordinated tasks with development team", "Collected Feedback"],
+      technologies: ["Jira", "Agile"],
       link: "#"
     },
     {
       id: 5,
+      name: "Compose Glow – Form Customization Platform",
+      description: "Platform for creating and customizing organizational forms",
+      role: "Project Manager Intern / Scrum Master (Aventude)",
+      responsibilities: ["Managed project timelines", "Jira boards management", "Sprint reporting", "Stakeholder communication"],
+      technologies: ["Jira", "Trello", "Confluence"],
+      link: "#"
+    },
+    {
+      id: 6,
       name: "CareFello – Elder Care Management System",
       description: "A web-based system to manage elderly care, appointments, and caregiver interactions",
       role: "University Project Contributor",
@@ -48,7 +57,7 @@ const ProjectsGrid = () => {
       link: "#"
     },
     {
-      id: 6,
+      id: 7,
       name: "Krushi Arunalu – Supply Chain Management System",
       description: "Web-based system to manage purchase and sales of agri and crop products",
       role: "University Project Contributor",
@@ -88,33 +97,39 @@ const ProjectsGrid = () => {
                 {project.description}
               </p>
               
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 text-sm mb-1">Role:</h4>
-                <p className="text-gray-700 text-sm">{project.role}</p>
-              </div>
-              
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 text-sm mb-2">Key Responsibilities:</h4>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  {project.responsibilities.map((responsibility, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="w-1 h-1 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                      {responsibility}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 text-sm mb-2">Technologies Used:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-xs font-medium">
-                      {tech}
-                    </span>
-                  ))}
+              {project.role && (
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-1">Role:</h4>
+                  <p className="text-gray-700 text-sm">{project.role}</p>
                 </div>
-              </div>
+              )}
+              
+              {project.responsibilities && project.responsibilities.length > 0 && (
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">Key Responsibilities:</h4>
+                  <ul className="text-gray-600 text-sm space-y-1">
+                    {project.responsibilities.map((responsibility, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="w-1 h-1 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        {responsibility}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {project.technologies && project.technologies.length > 0 && (
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-xs font-medium">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
             </motion.div>
           ))}

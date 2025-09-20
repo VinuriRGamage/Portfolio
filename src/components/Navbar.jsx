@@ -12,6 +12,7 @@ const Navbar = () => {
     { path: '/about', label: 'About' },
     { path: '/skills', label: 'Skills' },
     { path: '/projects', label: 'Projects' },
+    { path: '/certificates', label: 'Certificates' },
     { path: '/contact', label: 'Contact' }
   ]
 
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-bold text-gray-900">
-            Portfolio
+            Vinuri Gamage
           </Link>
           
           {/* Desktop Menu */}

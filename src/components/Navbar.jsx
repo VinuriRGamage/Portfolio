@@ -17,10 +17,10 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="bg-white shadow-sm border-b">
+    <nav className="bg-blue-600 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-bold text-gray-900">
+          <Link to="/" className="text-xl font-bold text-white">
             Vinuri Gamage
           </Link>
           
@@ -30,7 +30,7 @@ const Navbar = () => {
               <Link 
                 key={path}
                 to={path} 
-                className={`${isActive(path) ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 transition-colors`}
+                className={`${isActive(path) ? 'text-blue-200' : 'text-white'} hover:text-blue-200 transition-colors`}
               >
                 {label}
               </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -54,14 +54,14 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden border-t">
+          <div className="md:hidden border-t border-blue-500">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map(({ path, label }) => (
                 <Link 
                   key={path}
                   to={path} 
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md ${isActive(path) ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-gray-50 transition-colors`}
+                  className={`block px-3 py-2 rounded-md ${isActive(path) ? 'text-blue-200 bg-blue-700' : 'text-white'} hover:text-blue-200 hover:bg-blue-700 transition-colors`}
                 >
                   {label}
                 </Link>
